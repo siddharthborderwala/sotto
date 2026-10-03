@@ -1,0 +1,21 @@
+Sotto
+Copyright (c) 2026 Siddharth Borderwala. Licensed under the MIT License (see LICENSE).
+
+Sotto does not bundle a speech model, an engine or ffmpeg. scripts/install.sh installs them
+on your Mac from their own sources, under their own licenses:
+
+  Phonon-2 speech model     Fermion Research. CC BY 4.0.
+                            https://www.fermionresearch.com/research/phonon-2/
+                            https://huggingface.co/FermionResearch/Phonon-2
+  fermion-research          Fermion Research: the `phonon` CLI and speech engine. Apache License 2.0.
+                            https://github.com/fermionresearch/phonon
+  ffmpeg                    The FFmpeg developers. LGPL/GPL, installed with Homebrew.
+  Caddy (optional)          Apache License 2.0, installed with Homebrew.
+
+The web app includes, through its npm dependencies:
+
+  Hono, @hono/bun, fflate, React, Base UI, shadcn/ui, Tailwind CSS, Sonner    MIT
+  Lucide icons                                                                ISC
+  Geist, Geist Mono (Vercel), Literata (TypeTogether), via Fontsource         SIL Open Font License 1.1
+
+Each package's license ships with it in node_modules.

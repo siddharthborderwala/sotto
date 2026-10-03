@@ -1,0 +1,36 @@
+name: Bug report
+description: Something isn't working as described
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Drop a 10-minute .m4a recording
+        2. …
+  - type: input
+    id: mac
+    attributes:
+      label: Mac and macOS version
+      placeholder: MacBook Pro M3, macOS 26.1
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser
+      placeholder: Safari 26, Chrome 140…
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: The last lines of ~/Library/Logs/sotto/web.log and engine.log, if relevant. Remove anything private.
+      render: text

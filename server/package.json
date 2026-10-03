@@ -1,0 +1,20 @@
+{
+  "name": "sotto-server",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "PORT=8012 bun --watch src/index.ts",
+    "start": "bun src/index.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@hono/bun": "^1.0.0",
+    "fflate": "^0.8.3",
+    "hono": "^4.13.12"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.9.0"
+  },
+  "license": "MIT"
+}

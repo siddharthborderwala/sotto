@@ -1,0 +1,20 @@
+# Optional HTTPS for Sotto under a name of your choice, on this Mac only. Used when you install
+# with SOTTO_HOST set; the name resolves to 127.0.0.1 through /etc/hosts, so it needs no DNS.
+# install.sh copies this file to a root-owned location and passes SOTTO_HOST and SOTTO_PORT in.
+{
+	# Caddy runs as root; its admin API would let any local process reconfigure it.
+	admin off
+	skip_install_trust
+	storage file_system "/Library/Application Support/sotto-caddy"
+}
+
+{$SOTTO_HOST} {
+	tls internal
+	bind 127.0.0.1 [::1]
+	request_body {
+		max_size 16GB
+	}
+	reverse_proxy 127.0.0.1:{$SOTTO_PORT:8011} {
+		flush_interval -1
+	}
+}
