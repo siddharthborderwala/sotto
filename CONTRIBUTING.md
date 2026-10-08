@@ -79,7 +79,7 @@ web/src/
   hooks/use-mic-mode.ts           the M-key state machine
   components/ui/                  shadcn/ui (Base UI) components
 public/pcm-tap.worklet.js         AudioWorklet: low-pass and resample to 16 kHz
-scripts/                          install, update, uninstall
+scripts/                          setup (one-line install), install, update, uninstall
 ```
 
 The UI uses shadcn/ui on Base UI with the theme preset `b3roOBDZbs` (`bunx --bun shadcn@latest apply --preset b3roOBDZbs --only theme`). The design is flat (radius 0), with lime as the accent. Add components with `bunx --bun shadcn@latest add <name>`.

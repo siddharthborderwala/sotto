@@ -23,6 +23,12 @@ Drop in a recording, or hold <kbd>M</kbd> and talk. [Phonon-2](https://www.fermi
 You need a Mac with Apple silicon (M1 or later), [Homebrew](https://brew.sh) and about 1 GB of free space.
 
 ```sh
+curl -fsSL bldr.sh/sotto | bash
+```
+
+This downloads Sotto into `~/.sotto` and runs its installer. ([Read the script](scripts/setup.sh) first if you like.) If you'd rather clone it yourself:
+
+```sh
 git clone https://github.com/siddharthborderwala/sotto.git
 cd sotto
 ./scripts/install.sh
@@ -38,7 +44,7 @@ It doesn't need your password. Then open **http://localhost:8011**.
 
 To use Sotto like an app, open it in Safari and choose **File → Add to Dock**, or in Chrome or Edge choose **Install Sotto** from the address bar.
 
-To update later, run `./scripts/update.sh`. To remove Sotto's services, run `./scripts/uninstall.sh`; your transcripts are kept.
+To update, run the same one-liner again (or `./scripts/update.sh` in your copy). To remove Sotto's services, run `~/.sotto/scripts/uninstall.sh` (or `./scripts/uninstall.sh` in your copy); your transcripts are kept.
 
 <details>
 <summary><b>Optional: serve Sotto at your own HTTPS name</b></summary>
